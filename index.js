@@ -72,7 +72,7 @@
           }
           eventHandler(evt);
         }
-      }(React.findDOMNode(this), this.handleClickOutside));
+      }((typeof this.getDOMNode() === 'object' ? this.getDOMNode() : React.findDOMNode(this)), this.handleClickOutside));
 
       var pos = registeredComponents.length;
       registeredComponents.push(this);
